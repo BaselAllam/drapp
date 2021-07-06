@@ -12,7 +12,12 @@ class MyApp extends StatelessWidget{
 @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
 }
+
+
+
+// design url : https://dribbble.com/shots/12022071-Project-Medicare
