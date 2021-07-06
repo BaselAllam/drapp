@@ -1,6 +1,7 @@
 //subColor => #24303c
-//mainColor => #000000
-//iconColor => #727a81
-//backgroundColor => #f0efed
+//mainColor => #5a4ff7
+//bottomNavBarIconColor => #d9d6f2
+//appIconColor => #aeaeb5
+//backgroundColor => #ffffff
 
-// design url
+// design url : https://dribbble.com/shots/12022071-Project-Medicare
