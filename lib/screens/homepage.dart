@@ -1,6 +1,7 @@
 import 'package:drapp/theme/icontheme.dart';
 import 'package:drapp/theme/texttheme.dart';
 import 'package:drapp/widgets/categorywidget.dart';
+import 'package:drapp/widgets/notibutton.dart';
 import 'package:flutter/material.dart';
 import 'package:drapp/theme/sharedcolors.dart';
 
@@ -39,7 +40,7 @@ List categoryImages = [
         backgroundColor: backgroundColor,
         leading: Icon(Icons.menu),
         actions: [
-          Icon(Icons.notifications),
+          NotiButton()
         ],
         iconTheme: appBarIconTheme,
         centerTitle: true,

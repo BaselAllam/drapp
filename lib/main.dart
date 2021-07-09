@@ -17,7 +17,3 @@ class MyApp extends StatelessWidget{
     );
   }
 }
-
-
-
-// design url : https://dribbble.com/shots/12022071-Project-Medicare
