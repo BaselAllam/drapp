@@ -1,5 +1,6 @@
-import 'package:drapp/theme/sharedcolors.dart';
+import 'package:drapp/screens/doctorprofile.dart';
 import 'package:drapp/theme/texttheme.dart';
+import 'package:drapp/widgets/bookbutton.dart';
 import 'package:drapp/widgets/favbutton.dart';
 import 'package:flutter/material.dart';
 
@@ -33,8 +34,8 @@ class _DoctoWidgetState extends State<DoctoWidget> {
             child: FavButton(),
           ),
           Positioned(
-            left: 30.0,
-            right: 200.0,
+            left: 15.0,
+            right: 170.0,
             top: 35.0,
             bottom: 35.0,
               child: Container(
@@ -65,18 +66,12 @@ class _DoctoWidgetState extends State<DoctoWidget> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Container(
-                          height: 20.0,
-                          width: 50.0,
-                          decoration: BoxDecoration(
-                            color: mainColor,
-                            borderRadius: BorderRadius.circular(5.0),
-                          ),
-                          alignment: Alignment.center,
-                          child: Text(
-                            'Book',
-                            style: TextStyle(color: Colors.white, fontSize: 17.0),
-                          ),
+                        BookButton(
+                          () {
+                            Navigator.push(context, MaterialPageRoute(builder: (_) {return DoctorProfile();}));
+                          },
+                          20.0,
+                          50.0
                         ),
                         Text(
                           ' 300\nPatient',
@@ -87,7 +82,7 @@ class _DoctoWidgetState extends State<DoctoWidget> {
                   ],
                 ),
               ),
-                    ),
+            ),
             ),
         ],
       ),

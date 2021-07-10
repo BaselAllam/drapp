@@ -82,7 +82,7 @@ List categoryImages = [
                   crossAxisCount: 3,
                   crossAxisSpacing: 15.0,
                   mainAxisSpacing: 10.0,
-                  childAspectRatio: 1.0
+                  childAspectRatio: 0.7
                 ),
                 itemCount: categoryImages.length,
                 itemBuilder: (context, index) {
