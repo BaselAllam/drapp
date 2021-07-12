@@ -1,4 +1,6 @@
+import 'package:drapp/models/global.dart';
 import 'package:drapp/screens/botoomnavbar/bottomnavbar.dart';
+import 'package:drapp/screens/signup.dart';
 import 'package:drapp/theme/sharedcolors.dart';
 import 'package:drapp/theme/snack.dart';
 import 'package:drapp/theme/texttheme.dart';
@@ -71,6 +73,7 @@ bool isSecured = true;
                       snack(Colors.red, 'Some Fields Required')
                     );
                   }else{
+                    setDataLocaly('email', emailController.text);
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) {return BottomNavBar();}));
                   }
                 },
@@ -84,7 +87,9 @@ bool isSecured = true;
                   backgroundColor: Colors.white,
                   side: BorderSide(color: mainColor, width: 1.5)
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, 'signup');
+                },
               ),
             ],
           ),
