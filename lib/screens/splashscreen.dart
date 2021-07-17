@@ -21,7 +21,7 @@ void initState() {
   Timer(
     Duration(seconds: 10),
     () {
-      Navigator.pushNamed(context, 'login');
+      Navigator.pushReplacementNamed(context, 'login');
     }
   );
   // checkSavedData();

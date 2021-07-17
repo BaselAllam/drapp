@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1042079631367",
+    "project_id": "drappprivate",
+    "storage_bucket": "drappprivate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042079631367:android:5524c302d3f98d22de82a2",
+        "android_client_info": {
+          "package_name": "com.example.brbshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042079631367-v37tt2c9vlmsshu1amppfg70ffr6jnhp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.brbshop",
+            "certificate_hash": "ce991a63f5a2a0ac2a2e96d34685f6a81cba9979"
+          }
+        },
+        {
+          "client_id": "1042079631367-gbcej2hh5qtjvlb5uj3jj69a42lig8fj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxwkvrzjlDpBzvePvIFmoumV_HOEU8NCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042079631367-gbcej2hh5qtjvlb5uj3jj69a42lig8fj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

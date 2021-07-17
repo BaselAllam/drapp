@@ -1,3 +1,4 @@
+import 'package:drapp/screens/map.dart';
 import 'package:drapp/theme/sharedcolors.dart';
 import 'package:drapp/theme/texttheme.dart';
 import 'package:drapp/widgets/bookbutton.dart';
@@ -110,11 +111,24 @@ class _DoctorProfileState extends State<DoctorProfile> {
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: BookButton(
-                        () {},
-                        40.0,
-                        120.0
+                      padding: const EdgeInsets.all(5.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          BookButton(
+                            () {},
+                            40.0,
+                            120.0
+                          ),
+                          IconButton(
+                            icon: Icon(Icons.location_on),
+                            color: mainColor,
+                            iconSize: 20.0,
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(fullscreenDialog: true, builder: (_) {return Map();}));
+                            }
+                          )
+                        ],
                       ),
                     )
                   ],
