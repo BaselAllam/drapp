@@ -44,7 +44,7 @@ class _FavScreenState extends State<FavScreen> {
           scrollDirection: Axis.vertical,
           itemCount: 10,
           itemBuilder: (context, index) {
-            return DoctoWidget();
+            return DoctoWidget('ahmed', '"https://firebasestorage.googleapis.com/v0/b/drappprivate.appspot.com/o/pexels-photo-5452293.jpeg?alt=media&token=006f4cca-fbb8-4520-a9a1-f676cf50ed90"');
           },
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:drapp/responsive/responsive.dart';
 import 'package:drapp/screens/map.dart';
 import 'package:drapp/theme/sharedcolors.dart';
 import 'package:drapp/theme/texttheme.dart';
@@ -32,7 +33,8 @@ class _DoctorProfileState extends State<DoctorProfile> {
     );
   }
   header() {
-    double mainContainerHeight = MediaQuery.of(context).size.height/2.8;
+    MediaQueryData data = MediaQuery.of(context);
+    double mainContainerHeight = MediaQuery.of(context).size.height/2.6;
     return Container(
       height: mainContainerHeight,
       child: Stack(
@@ -69,7 +71,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
             top: 50.0,
             left: 20.0,
             right: 20.0,
-            height: mainContainerHeight - 75,
+            height: mainContainerHeight - responsiveDoctorProfile(data),
             child: Container(
               child: Card(
                 color: Colors.white,
@@ -82,7 +84,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                         Container(
                           margin: EdgeInsets.all(15.0),
                           width: MediaQuery.of(context).size.width/3,
-                          height: mainContainerHeight - 175,
+                          height: mainContainerHeight - responsiveDoctorProfileImage(data),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15.0),
                             image: DecorationImage(

@@ -1,3 +1,4 @@
+import 'package:drapp/responsive/responsive.dart';
 import 'package:drapp/screens/doctorprofile.dart';
 import 'package:drapp/theme/texttheme.dart';
 import 'package:drapp/widgets/bookbutton.dart';
@@ -8,6 +9,11 @@ import 'package:flutter/material.dart';
 
 class DoctoWidget extends StatefulWidget {
 
+  final String name;
+  final String image;
+
+  DoctoWidget(this.name, this.image);
+
   @override
   _DoctoWidgetState createState() => _DoctoWidgetState();
 }
@@ -15,6 +21,7 @@ class DoctoWidget extends StatefulWidget {
 class _DoctoWidgetState extends State<DoctoWidget> {
   @override
   Widget build(BuildContext context) {
+    MediaQueryData data = MediaQuery.of(context);
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Stack(
@@ -26,7 +33,7 @@ class _DoctoWidgetState extends State<DoctoWidget> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15.0),
               image: DecorationImage(
-                image: NetworkImage('https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
+                image: NetworkImage(widget.image),
                 fit: BoxFit.fill
               )
             ),
@@ -35,7 +42,7 @@ class _DoctoWidgetState extends State<DoctoWidget> {
           ),
           Positioned(
             left: 15.0,
-            right: 170.0,
+            right: responsiveDoctorWidget(data),
             top: 35.0,
             bottom: 35.0,
               child: Container(
@@ -52,7 +59,7 @@ class _DoctoWidgetState extends State<DoctoWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
-                      '  Doctor Name',
+                      '  ${widget.name}',
                       style: mainTextStyle
                     ),
                     Text(

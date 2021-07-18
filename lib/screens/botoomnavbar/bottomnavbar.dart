@@ -1,8 +1,10 @@
+import 'package:drapp/models/mainModel.dart';
 import 'package:drapp/screens/botoomnavbar/account.dart';
 import 'package:drapp/screens/botoomnavbar/favscreen.dart';
 import 'package:drapp/screens/botoomnavbar/homepage.dart';
 import 'package:drapp/theme/sharedcolors.dart';
 import 'package:flutter/material.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 
 
@@ -13,10 +15,6 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
-
-List screens = [
-  HomePage(), FavScreen(), Account(),
-];
 
 int currentIndex = 0;
 
@@ -54,7 +52,20 @@ int currentIndex = 0;
           });
         },
       ),
-      body: screens[currentIndex],
+      body: checkBody()
+    );
+  }
+  checkBody() {
+    return ScopedModelDescendant(
+      builder: (context, child, MainModel model) {
+        if(currentIndex == 0) {
+          return HomePage(model);
+        }else if(currentIndex == 1){
+          return FavScreen();
+        }else{
+          return Account();
+        }
+      },
     );
   }
 }
